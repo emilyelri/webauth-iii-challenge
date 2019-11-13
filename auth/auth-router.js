@@ -34,7 +34,7 @@ router.post('/login', (req, res) => {
     .catch(err => res.status(500).json({message: 'Server Error: Unable to log in.', error: err}));
 });
 
-function generateToken(user) {
+function generateToken(user) { 
   const payload = {
     subject: user.id,
     username: user.username,
